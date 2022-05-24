@@ -11,6 +11,11 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
+// import IndexRentals from './components/rental/Index'
+import CreateRental from './components/rental/Create'
+// import ShowRental from './components/rental/Show'
+// import UpdateRental from './components/rental/Update'
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -44,8 +49,8 @@ class App extends Component {
 
     return (
       <Fragment>
-	      <Header user={user} />
-	      {msgAlerts.map((msgAlert) => (
+        <Header user={user} />
+        {msgAlerts.map((msgAlert) => (
           <AutoDismissAlert
             key={msgAlert.id}
             heading={msgAlert.heading}
@@ -55,8 +60,8 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-	      <main className='container'>
-	        <Route
+        <main className='container'>
+          <Route
             path='/sign-up'
             render={() => (
               <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
@@ -68,6 +73,18 @@ class App extends Component {
               <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
+          {/* <Route
+            exact
+            user={user}
+            path='/'
+            render={() => <IndexRentals msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            exact
+            user={user}
+            path='/rentals/:id'
+            render={() => <ShowRental msgAlert={this.msgAlert} user={user} />}
+          /> */}
           <AuthenticatedRoute
             user={user}
             path='/sign-out'
@@ -86,6 +103,22 @@ class App extends Component {
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
           />
+          <AuthenticatedRoute
+            user={user}
+            path='/'
+            render={() => <CreateRental msgAlert={this.msgAlert} user={user} />}
+          />
+          {/* <AuthenticatedRoute
+            user={user}
+            path='/rentals/:id/update-rental'
+            render={() => <UpdateRental msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/my-rentals'
+            // userOnly prop used for filtering events that only belong to the user
+            render={() => <IndexRentals msgAlert={this.msgAlert} user={user} userOnly={true} />}
+          /> */}
         </main>
       </Fragment>
     )
