@@ -46,7 +46,7 @@ export const updateRental = (data, id, user) => {
     method: 'PATCH',
     url: apiUrl + '/rentals/' + id,
     data: {
-      event: {
+      rental: {
         title: data.title,
         quantity: data.quantity,
         color: data.color,

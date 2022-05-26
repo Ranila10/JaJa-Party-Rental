@@ -11,11 +11,10 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
-// import IndexRentals from './components/rental/Index'
+import IndexRentals from './components/rental/Index'
 import CreateRental from './components/rental/Create'
-// import ShowRental from './components/rental/Show'
-// import UpdateRental from './components/rental/Update'
-
+import ShowRental from './components/rental/Show'
+import UpdateRental from './components/rental/Update'
 class App extends Component {
   constructor (props) {
     super(props)
@@ -73,10 +72,11 @@ class App extends Component {
               <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
-          {/* <Route
+
+          <AuthenticatedRoute
             exact
             user={user}
-            path='/'
+            path='/index'
             render={() => <IndexRentals msgAlert={this.msgAlert} user={user} />}
           />
           <AuthenticatedRoute
@@ -84,7 +84,7 @@ class App extends Component {
             user={user}
             path='/rentals/:id'
             render={() => <ShowRental msgAlert={this.msgAlert} user={user} />}
-          /> */}
+          />
           <AuthenticatedRoute
             user={user}
             path='/sign-out'
@@ -105,10 +105,10 @@ class App extends Component {
           />
           <AuthenticatedRoute
             user={user}
-            path='/'
+            path='/create-rental'
             render={() => <CreateRental msgAlert={this.msgAlert} user={user} />}
           />
-          {/* <AuthenticatedRoute
+          <AuthenticatedRoute
             user={user}
             path='/rentals/:id/update-rental'
             render={() => <UpdateRental msgAlert={this.msgAlert} user={user} />}
@@ -116,9 +116,9 @@ class App extends Component {
           <AuthenticatedRoute
             user={user}
             path='/my-rentals'
-            // userOnly prop used for filtering events that only belong to the user
+            // userOnly prop used for filtering rentals that only belong to the user
             render={() => <IndexRentals msgAlert={this.msgAlert} user={user} userOnly={true} />}
-          /> */}
+          />
         </main>
       </Fragment>
     )
