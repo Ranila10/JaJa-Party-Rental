@@ -10,6 +10,7 @@ const authenticatedOptions = (
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
     <NavLink to='/create-rental' className='nav-link'>Create Package</NavLink>
     <NavLink to='/my-rental' className='nav-link'>My Package</NavLink>
+    <NavLink to='/index-everyone' className='nav-link'>See All user</NavLink>
   </Fragment>
 )
 

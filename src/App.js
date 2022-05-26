@@ -12,6 +12,7 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
 import IndexRentals from './components/rental/Index'
+import IndexAllRentals from './components/rental/IndexAll'
 import CreateRental from './components/rental/Create'
 import ShowRental from './components/rental/Show'
 import UpdateRental from './components/rental/Update'
@@ -72,7 +73,12 @@ class App extends Component {
               <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
-
+          <AuthenticatedRoute
+            exact
+            user={user}
+            path='/index-everyone'
+            render={() => <IndexAllRentals msgAlert={this.msgAlert} user={user} />}
+          />
           <AuthenticatedRoute
             exact
             user={user}

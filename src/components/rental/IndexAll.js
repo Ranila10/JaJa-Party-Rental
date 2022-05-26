@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { indexRentals } from '../../api/rental'
+import { indexAllRentals } from '../../api/rental'
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-class IndexRentals extends Component {
+class IndexAllRentals extends Component {
   constructor (props) {
     super(props)
 
@@ -18,12 +18,12 @@ class IndexRentals extends Component {
     const { user, msgAlert } = this.props
 
     if (user) {
-      indexRentals(user)
+      indexAllRentals(user)
         .then((res) => this.setState({ rentals: res.data.rentals }))
         .then(() => {
           msgAlert({
             heading: 'Index Success',
-            message: 'Just indexed your rental!',
+            message: 'Just indexed All!',
             variant: 'success'
           })
         })
@@ -135,4 +135,4 @@ class IndexRentals extends Component {
   }
 }
 
-export default IndexRentals
+export default IndexAllRentals

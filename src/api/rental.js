@@ -1,13 +1,22 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const indexRentals = user => {
+export const indexRentals = (user) => {
   return axios({
     method: 'GET',
-    url: apiUrl + '/rentals'
-    // headers: {
-    //   Authorization: `Bearer ${user.token}`
-    // }
+    url: apiUrl + '/rentals',
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+export const indexAllRentals = (user) => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/allrentals',
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
   })
 }
 export const createRental = (data, user) => {
