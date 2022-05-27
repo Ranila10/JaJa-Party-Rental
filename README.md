@@ -8,6 +8,11 @@ As a user, I want to update my rentals.
 As a user, I want to see all the rentals.
 As a user, I want to see the rentals I've created.
 
+The link at the bottom will take you to my wireframe and erd.
+
+![App Wireframe](https://i.imgur.com/xLLKtko.png)
+
+![App ERD](https://i.imgur.com/iCemSKW.png)
 
 Technologies Used
 Frontend:
