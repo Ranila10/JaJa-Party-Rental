@@ -56,16 +56,28 @@ class IndexAllRentals extends Component {
           <Card border="secondary">
             <Card.Header>
               <Link
-                to={'/sign-in'}>
+                to={`/rentals/${rental._id}`}>
                 {rental.title}
               </Link>
             </Card.Header>
             <Card.Body>
               <Card.Title>
-                {rental.quantity}
+                {rental.name}
               </Card.Title>
               <Card.Subtitle>
-                {rental.color} at {rental.price}
+                {rental.quantity}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.color}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.price}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.pickup}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.delivery}
               </Card.Subtitle>
             </Card.Body>
           </Card>
@@ -85,10 +97,22 @@ class IndexAllRentals extends Component {
             </Card.Header>
             <Card.Body>
               <Card.Title>
-                {rental.quantity}
+                {rental.name}
               </Card.Title>
               <Card.Subtitle>
-                {rental.color} at {rental.price}
+                {rental.quantity}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.color}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.price}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.pickup}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.delivery}
               </Card.Subtitle>
             </Card.Body>
           </Card>
@@ -111,11 +135,21 @@ class IndexAllRentals extends Component {
             </Card.Header>
             <Card.Body>
               <Card.Title>
-                {rental.quantity}
+                {rental.name}
               </Card.Title>
               <Card.Subtitle>
-                {rental.color} at {rental.price}
-                {rental.date} at {rental.pickup}
+                {rental.quantity}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.color}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.price}
+              </Card.Subtitle>
+              <Card.Subtitle>
+                {rental.pickup}
+              </Card.Subtitle>
+              <Card.Subtitle>
                 {rental.delivery}
               </Card.Subtitle>
             </Card.Body>

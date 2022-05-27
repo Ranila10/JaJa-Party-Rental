@@ -1,7 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
-body{
-    background-image: url();
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar{
+background:rgb(114, 206, 128);
+color: gold;
+font-family: 'Pacifico',
+cursive;
+padding-left: 25px;
 }
-header{
-background-color: goldenrod;
+
+body {
+    font-family: 'Pacifico',
+    cursive;
+    min-height: 100%;
+    opacity: 1;
+    background: no-repeat center fixed;
+    background-size: cover;
+    background-color: #6BC4C9;
+    color: black;
+    // box-shadow: 2px 2px 2px;
+    background-image: url("../src/Images/reception.jpeg");
 }

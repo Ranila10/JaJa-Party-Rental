@@ -82,7 +82,7 @@ class App extends Component {
           <AuthenticatedRoute
             exact
             user={user}
-            path='/index'
+            path='/my-rental'
             render={() => <IndexRentals msgAlert={this.msgAlert} user={user} />}
           />
           <AuthenticatedRoute
