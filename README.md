@@ -61,5 +61,3 @@ If I had more time, I would have create a button where people can give reviews a
 https://ranila10.github.io/JaJa-Party-Rental/
 
 https://github.com/Ranila10/JaJa-Party-Rental
-
-https://dashboard.heroku.com/apps/desolate-ravine-55235
